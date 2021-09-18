@@ -1,0 +1,110 @@
+*, 
+*:before, 
+*:after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+	background: #81ecec;
+}
+
+.menu {
+	background: white;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 0 0 0 white, 0 0 0 0 white;
+	transition: 1.1s cubic-bezier(0.19, 1.01, 0.22, 1.01);
+}
+
+.menu:hover {
+	box-shadow: 0 0 0 8px white, 0 0 0 8px white;
+}
+
+.burger {
+	position: relative;
+	display: block;
+	background: black;
+	width: 30px;
+	height: 2px;
+	top: 29px;
+    left: 15px;
+	transition: 0.5s ease-in-out;
+}
+
+.burger:before,
+.burger:after {
+	position: absolute;
+	background: black;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s ease-in-out;
+}
+
+.burger:before {
+	top: -10px;
+}
+
+.burger:after {
+	bottom: -10px;
+}
+
+input#menuBurger {
+	display: none;
+}
+
+
+/* Início da Animação do X */
+input:checked ~ label div span.burger {
+	transform: rotate(45deg);
+}
+
+input:checked ~ label div span.burger:before {
+	transform: rotate(90deg);
+	top: 0;
+}
+
+input:checked ~ label div span.burger:after {
+	transform: rotate(90deg);
+	bottom: 0;
+}
+/* Fim da Animação do X */
+
+/* Início da Animação da Espansão do Menu */
+
+/* vw = view port width --> significa toda a largura da tela */
+input:checked ~ label div.menu {
+	box-shadow: 0 0 0 130vw white, 0 0 0 130vw white;
+}
+
+ul.menuExpansivo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	opacity: 0;
+}
+
+ul.menuExpansivo li a {
+	display: block;
+	margin-bottom: 10px;
+	color: #00cec9;
+	font-size: 1rem;
+	text-decoration: none;
+	transition: 0.25s 1s cubic-bezier(0, 1.07, 0, 1.02);
+}
+
+input:checked ~ ul.menuExpansivo {
+	opacity: 1;
+}
+
+/* Fim da Animação da Espansão do Menu */

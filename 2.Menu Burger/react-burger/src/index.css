@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'PoetsenOne';
+  src: url('./fonts/PoetsenOne.ttf');
+}
+/*========== VARIABLES CSS ====================================================================================================*/
+:root {
+  /*========== COLORS =========================================================================================================*/
+  --first-color: #9D4BFF;
+  --second-color: #4D49BF;
+  --first-color-dark: #314279;
+  --first-color-light: #A49EAC;
+  --first-color-lighten: #F2F2F2;
+  --title-color: #F2A20C;
+
+  /*========== FONT / TYPOGRAPHY ===========================================================================================*/
+  --body-font: 'PoetsenOne', sans-serif;
+  --normal-font-size: .938rem;
+  --h1-font-size: 1.375rem;
+  --h3-font-size: 1.125rem;
+  --small-font-size: .75rem;
+}
+
+/*===== BASE =====*/
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.icon {
+  position: absolute;
+  z-index: 1;
+  right: 25px;
+  width: max-content;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburguer {
+  position: absolute;
+  top: -3rem;
+  right: -20px;
+  width: 20px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--first-color-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.hamburguer:before {
+  content: '';
+  position: absolute;
+  margin-top: 23%;
+  right: 0;
+  top: -12px;
+  width: 27px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--first-color-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.hamburguer:after {
+  content: '';
+  position: absolute;
+  margin-top: -18%;
+  right: 0;
+  top: 12px;
+  width: 27px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--first-color-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.containerBtns {
+  background-color: var(--first-color-dark);
+  margin-top: 4rem;
+  padding: 10px 0;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+}
+
+.categoriesBtns {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.categoriesBtns button {
+  color: var(--title-color);
+  font-size: var(--h3-font-size);
+  height: max-content;
+  margin-top: 0.5rem;
+  padding: 3px;
+  cursor: pointer;
+  transition: .8s;
+  border-bottom: 1px solid rgba(235, 232, 232, 0.2);
+}
+
+.categoriesBtns button:hover {
+  color: #FFFF;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, .3);
+  padding: 7px;
+}
+
+.categoriesBtns button:last-child {
+  border-bottom: none;
+}
+
+.iconActive .hamburguer {
+  background: transparent;
+  box-shadow: 0 2px 5px transparent;
+}
+
+.iconActive .hamburguer:before {
+  top: -6px;
+  background-color: var(--first-color-dark);
+  transform: rotate(225deg);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.iconActive .hamburguer:after {
+  top: 2px;
+  background-color: var(--first-color-dark);
+  transform: rotate(135deg);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menuClose {
+  visibility: hidden;
+}
+
+.titleClose button{
+  visibility: hidden;
+}
