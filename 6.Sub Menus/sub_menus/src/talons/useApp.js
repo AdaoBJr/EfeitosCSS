@@ -7,9 +7,10 @@ export default function useApp() {
 
   const showCollapse = useCallback(
     ({ target: { name } }) => {
-      setShowElement(name);
+      if (!showElement) return setShowElement(name);
+      if (showElement) return setShowElement('');
     },
-    [showElement]
+    [showElement, setShowElement]
   );
 
   return { showCollapse, showElement };
