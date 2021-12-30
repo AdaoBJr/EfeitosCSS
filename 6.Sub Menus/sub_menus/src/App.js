@@ -25,12 +25,22 @@ function App() {
       </section>
       <footer className="root">
         <div className="wrapper">
-          <div className="links">
-            <button name="link-0" className="linkName" onClick={showCollapse}>
+          <div
+            // className="links"
+            className={showElement === 'link-0' ? 'links bgColor' : 'links'}
+          >
+            <div className="linkName">
               <HomeOutlined className="linkIcon" />
-              <span>Dashboard</span>
+              <button
+                type="button"
+                name="link-0"
+                className="linkBtn"
+                onClick={showCollapse}
+              >
+                Dashboard
+              </button>
               <CaretDownOutlined className="collapseLink" />
-            </button>
+            </div>
             <ul
               className={
                 showElement === 'link-0' ? 'collapseMenu showCollapse' : 'collapseMenu'

@@ -93,16 +93,11 @@ a {
   column-gap: 0.75rem;
   color: var(--white-color);
   border-radius: 0.5rem;
-  transition: 0.3s;
   cursor: pointer;
 }
 
 .links {
   padding: 0.2rem 0.75rem;
-}
-
-.links:hover {
-  background-color: var(--first-color);
 }
 
 .linkIcon {
@@ -118,23 +113,30 @@ a {
   cursor: pointer;
 }
 
+.linkBtn {
+  color: var(--white-color);
+  cursor: pointer;
+}
+
 .collapseLink {
   justify-self: flex-end;
-  transition: 0.5s;
 }
 
 .collapseMenu {
-  visibility: hidden;
+  display: grid;
+  opacity: 0;
   height: 0;
   padding: 0 2.25rem;
-  display: grid;
-  transition: height 0.5s ease;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .showCollapse {
-  visibility: visible;
+  opacity: 1;
   height: 100%;
+  background-color: var(--first-color);
+  transition: all 1.2s ease;
 }
+
 .collapseSublink {
   color: var(--sub-color);
 }
