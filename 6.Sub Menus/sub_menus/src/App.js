@@ -42,7 +42,7 @@ function App() {
             <MessageOutlined className="linkIcon" />
             <span className="linkName">Messenger</span>
             <CaretDownOutlined className="collapseLink" />
-            <ul className="collapseMenu">
+            <ul className="collapseMenu showCollapse">
               <a href="#" className="collapseSublink">
                 Data
               </a>
