@@ -147,6 +147,7 @@ a {
 
 .rotate {
   transform: rotate(180deg);
+  transition: all 0.7s ease;
 }
 
 @media (min-width: 1024px) {
