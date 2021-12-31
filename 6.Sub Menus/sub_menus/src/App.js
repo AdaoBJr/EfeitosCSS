@@ -25,10 +25,7 @@ function App() {
       </section>
       <footer className="root">
         <div className="wrapper">
-          <div
-            // className="links"
-            className={showElement === 'link-0' ? 'links bgColor' : 'links'}
-          >
+          <div className="links">
             <div className="linkName">
               <HomeOutlined className="linkIcon" />
               <button
@@ -39,7 +36,11 @@ function App() {
               >
                 Dashboard
               </button>
-              <CaretDownOutlined className="collapseLink" />
+              <CaretDownOutlined
+                className={
+                  showElement === 'link-0' ? 'collapseLink rotate' : 'collapseLink'
+                }
+              />
             </div>
             <ul
               className={
@@ -58,13 +59,28 @@ function App() {
             </ul>
           </div>
           <div className="links">
-            <div name="link-1" aria-hidden className="linkName">
+            <div className="linkName">
               <MessageOutlined className="linkIcon" />
-              <span>Messenger</span>
-              <CaretDownOutlined className="collapseLink" />
+              <button
+                type="button"
+                name="link-1"
+                className="linkBtn"
+                onClick={showCollapse}
+              >
+                Messenger
+              </button>
+              <CaretDownOutlined
+                className={
+                  showElement === 'link-1' ? 'collapseLink rotate' : 'collapseLink'
+                }
+              />
             </div>
 
-            <ul className="collapseMenu">
+            <ul
+              className={
+                showElement === 'link-1' ? 'collapseMenu showCollapse' : 'collapseMenu'
+              }
+            >
               <a href="#" className="collapseSublink">
                 Data
               </a>
@@ -77,12 +93,27 @@ function App() {
             </ul>
           </div>
           <div className="links">
-            <div name="link-2" aria-hidden className="linkName">
+            <div className="linkName">
               <PieChartOutlined className="linkIcon" />
-              <span>Results</span>
-              <CaretDownOutlined className="collapseLink" />
+              <button
+                type="button"
+                name="link-2"
+                className="linkBtn"
+                onClick={showCollapse}
+              >
+                Results
+              </button>
+              <CaretDownOutlined
+                className={
+                  showElement === 'link-2' ? 'collapseLink rotate' : 'collapseLink'
+                }
+              />
             </div>
-            <ul className="collapseMenu">
+            <ul
+              className={
+                showElement === 'link-2' ? 'collapseMenu showCollapse' : 'collapseMenu'
+              }
+            >
               <a href="#" className="collapseSublink">
                 Data
               </a>
@@ -95,12 +126,27 @@ function App() {
             </ul>
           </div>
           <div className="links">
-            <div name="link-3" aria-hidden className="linkName">
+            <div className="linkName">
               <FolderOpenOutlined className="linkIcon" />
-              <span>Projects</span>
-              <CaretDownOutlined className="collapseLink" />
+              <button
+                type="button"
+                name="link-3"
+                className="linkBtn"
+                onClick={showCollapse}
+              >
+                Projects
+              </button>
+              <CaretDownOutlined
+                className={
+                  showElement === 'link-3' ? 'collapseLink rotate' : 'collapseLink'
+                }
+              />
             </div>
-            <ul className="collapseMenu">
+            <ul
+              className={
+                showElement === 'link-3' ? 'collapseMenu showCollapse' : 'collapseMenu'
+              }
+            >
               <a href="#" className="collapseSublink">
                 Data
               </a>
@@ -113,12 +159,27 @@ function App() {
             </ul>
           </div>
           <div className="links">
-            <div name="link-4" aria-hidden className="linkName">
+            <div className="linkName">
               <TeamOutlined className="linkIcon" />
-              <span>Team</span>
-              <CaretDownOutlined className="collapseLink" />
+              <button
+                type="button"
+                name="link-4"
+                className="linkBtn"
+                onClick={showCollapse}
+              >
+                Team
+              </button>
+              <CaretDownOutlined
+                className={
+                  showElement === 'link-4' ? 'collapseLink rotate' : 'collapseLink'
+                }
+              />
             </div>
-            <ul className="collapseMenu">
+            <ul
+              className={
+                showElement === 'link-4' ? 'collapseMenu showCollapse' : 'collapseMenu'
+              }
+            >
               <a href="#" className="collapseSublink">
                 Data
               </a>
@@ -131,12 +192,27 @@ function App() {
             </ul>
           </div>
           <div className="links">
-            <div name="link-5" aria-hidden className="linkName">
+            <div className="linkName">
               <SettingOutlined className="linkIcon" />
-              <span>Settings</span>
-              <CaretDownOutlined className="collapseLink" />
+              <button
+                type="button"
+                name="link-5"
+                className="linkBtn"
+                onClick={showCollapse}
+              >
+                Settings
+              </button>
+              <CaretDownOutlined
+                className={
+                  showElement === 'link-5' ? 'collapseLink rotate' : 'collapseLink'
+                }
+              />
             </div>
-            <ul className="collapseMenu">
+            <ul
+              className={
+                showElement === 'link-5' ? 'collapseMenu showCollapse' : 'collapseMenu'
+              }
+            >
               <a href="#" className="collapseSublink">
                 Data
               </a>
