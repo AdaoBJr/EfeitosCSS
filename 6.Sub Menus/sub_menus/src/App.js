@@ -47,15 +47,9 @@ function App() {
                 showElement === 'link-0' ? 'collapseMenu showCollapse' : 'collapseMenu'
               }
             >
-              <a href="#" className="collapseSublink">
-                Data
-              </a>
-              <a href="#" className="collapseSublink">
-                Group
-              </a>
-              <a href="#" className="collapseSublink">
-                Members
-              </a>
+              <a className="collapseSublink">Data</a>
+              <a className="collapseSublink">Group</a>
+              <a className="collapseSublink">Members</a>
             </ul>
           </div>
           <div className="links">
@@ -81,15 +75,9 @@ function App() {
                 showElement === 'link-1' ? 'collapseMenu showCollapse' : 'collapseMenu'
               }
             >
-              <a href="#" className="collapseSublink">
-                Data
-              </a>
-              <a href="#" className="collapseSublink">
-                Group
-              </a>
-              <a href="#" className="collapseSublink">
-                Members
-              </a>
+              <a className="collapseSublink">Data</a>
+              <a className="collapseSublink">Group</a>
+              <a className="collapseSublink">Members</a>
             </ul>
           </div>
           <div className="links">
@@ -114,15 +102,9 @@ function App() {
                 showElement === 'link-2' ? 'collapseMenu showCollapse' : 'collapseMenu'
               }
             >
-              <a href="#" className="collapseSublink">
-                Data
-              </a>
-              <a href="#" className="collapseSublink">
-                Group
-              </a>
-              <a href="#" className="collapseSublink">
-                Members
-              </a>
+              <a className="collapseSublink">Data</a>
+              <a className="collapseSublink">Group</a>
+              <a className="collapseSublink">Members</a>
             </ul>
           </div>
           <div className="links">
@@ -147,15 +129,9 @@ function App() {
                 showElement === 'link-3' ? 'collapseMenu showCollapse' : 'collapseMenu'
               }
             >
-              <a href="#" className="collapseSublink">
-                Data
-              </a>
-              <a href="#" className="collapseSublink">
-                Group
-              </a>
-              <a href="#" className="collapseSublink">
-                Members
-              </a>
+              <a className="collapseSublink">Data</a>
+              <a className="collapseSublink">Group</a>
+              <a className="collapseSublink">Members</a>
             </ul>
           </div>
           <div className="links">
@@ -180,15 +156,9 @@ function App() {
                 showElement === 'link-4' ? 'collapseMenu showCollapse' : 'collapseMenu'
               }
             >
-              <a href="#" className="collapseSublink">
-                Data
-              </a>
-              <a href="#" className="collapseSublink">
-                Group
-              </a>
-              <a href="#" className="collapseSublink">
-                Members
-              </a>
+              <a className="collapseSublink">Data</a>
+              <a className="collapseSublink">Group</a>
+              <a className="collapseSublink">Members</a>
             </ul>
           </div>
           <div className="links">
@@ -213,15 +183,9 @@ function App() {
                 showElement === 'link-5' ? 'collapseMenu showCollapse' : 'collapseMenu'
               }
             >
-              <a href="#" className="collapseSublink">
-                Data
-              </a>
-              <a href="#" className="collapseSublink">
-                Group
-              </a>
-              <a href="#" className="collapseSublink">
-                Members
-              </a>
+              <a className="collapseSublink">Data</a>
+              <a className="collapseSublink">Group</a>
+              <a className="collapseSublink">Members</a>
             </ul>
           </div>
         </div>
