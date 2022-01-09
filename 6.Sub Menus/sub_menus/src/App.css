@@ -15,7 +15,8 @@
 
   /*===== z index =====*/
   --z-fixed: 100;
-  --z-minimum: 1;
+  --z-above: 1;
+  --z-below: -1;
 
   /*===== shadows =====*/
   --box-shadow-default: 2px 2px 8px 2px rgba(0, 0, 0, 0.28);
@@ -99,6 +100,12 @@ a {
 
 .links {
   padding: 0.2rem 0.75rem;
+  transform: translateY(0);
+  transition: transform 2s;
+}
+
+.move {
+  transform: translateY(15px);
 }
 
 .linkIcon {
@@ -129,6 +136,7 @@ a {
   height: 0;
   padding: 0 2.25rem;
   border-radius: 0 0 0.5rem 0.5rem;
+  z-index: var(--z-below);
 }
 
 .showCollapse {
@@ -136,6 +144,7 @@ a {
   height: 100%;
   background-color: var(--first-color);
   transition: all 1.2s ease;
+  z-index: var(--z-above);
 }
 
 .collapseSublink {
@@ -144,11 +153,17 @@ a {
 
 .collapseSublink:hover {
   color: var(--white-color);
+  outline: none;
 }
 
 .rotate {
   transform: rotate(180deg);
   transition: all 0.7s ease;
+}
+
+.isDesktop {
+  background-color: none;
+  /* opacity: 1; */
 }
 
 @media (min-width: 1024px) {
@@ -158,6 +173,12 @@ a {
 
   .wrapper {
     grid-template-columns: repeat(3, 250px);
+    align-items: flex-start;
     column-gap: 4rem;
+    row-gap: 5rem;
+  }
+
+  .move {
+    transform: translateY(0);
   }
 }
