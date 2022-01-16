@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "PoetsenOne";
+  src: url("./fonts/PoetsenOne.ttf");
+}
+/*========== VARIABLES CSS ====================================================================================================*/
+:root {
+  /*========== COLORS =========================================================================================================*/
+  --first-color: #9d4bff;
+  --second-color: #4d49bf;
+  --first-color-dark: #314279;
+  --first-color-light: #a49eac;
+  --first-color-lighten: #f2f2f2;
+  --title-color: #f2a20c;
+
+  /*========== FONT / TYPOGRAPHY ===========================================================================================*/
+  --body-font: "PoetsenOne", sans-serif;
+  --normal-font-size: 0.938rem;
+  --h1-font-size: 1.375rem;
+  --h3-font-size: 1.125rem;
+  --small-font-size: 0.75rem;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.icon {
+  position: absolute;
+  z-index: 1;
+  right: 25px;
+  width: max-content;
+  margin-top: 4rem;
+  height: 20px;
+  cursor: pointer;
+}
+
+.plusMinus {
+  position: absolute;
+  top: -3rem;
+  right: -20px;
+  width: 27px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--first-color-dark);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.plusMinus:before {
+  content: "";
+  position: absolute;
+  margin-top: 5px;
+  right: 0;
+  top: -6px;
+  width: 27px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--first-color-dark);
+  transform: rotate(90deg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.iconActive .plusMinus:before {
+  transform: rotate(180deg);
+}
